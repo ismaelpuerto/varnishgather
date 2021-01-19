@@ -539,6 +539,13 @@ do
 	mycat "$arg"
 done
 
+mycat /etc/varnish/nats.conf
+run systemctl cat varnish-controller-nats.service
+run systemctl cat varnish-controller-api-gw.service
+run systemctl cat varnish-controller-agent.service
+run systemctl cat varnish-controller-brainz.service
+run systemctl cat varnish-controller-ui.service
+
 mycat /etc/sysconfig/varnish
 mycat /etc/varnish/varnish.params
 run systemctl cat varnish.service
